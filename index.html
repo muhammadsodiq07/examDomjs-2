@@ -4,20 +4,87 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lesson</title>
+    <title>Onet Game</title>
     <link
       href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/flexboxgrid.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link
       rel="stylesheet"
       href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
     />
     <link rel="stylesheet" href="css/main.min.css" />
   </head>
-
   <body>
+
+  
+    <div class="restart">
+      <div class="restart__main">
+        <h2 class="restart__game">
+          GAME OVER
+        </h2>
+        <button class="restart__btn btn mt-2">Restart</button>
+      </div>
+    </div>
+    <section id="content">
+        <div class="content d-flex align-items-center justify-content-between">
+          <div class="content__main d-flex align-items-center">
+            <div class="game__countDiv me-3">
+              <span class="game__count">0</span>
+            </div>
+            <div class="content__one d-flex align-items-center">
+              <span class="d-block me-4 content__time"><i class='bx bx-timer'></i></span>
+              <p><span id="my_timer">00:01:00</span></p>
+            </div>
+            <div class="content__one d-flex align-items-center">
+              <span class="d-block me-4 content__time"><i class='bx bxs-star' ></i></span>
+              <span class="game__star">0</span>
+            </div>
+          </div>
+          <div class="content__level">
+              <h2 class="level">Level 1</h2>
+          </div>
+          <div class="content__restart d-flex align-items-center">
+              <div class="content__shef d-flex align-items-center  me-3">
+                <i onclick="randomCards()" class='bx bx-shuffle me-1'></i>
+                <span class="content__shuff content__text">5</span>
+              </div>
+              <div class="content__shef d-flex align-items-center  me-2">
+                <i onclick="searchImg()" class='bx bx-search'></i>
+                <span class="content__search content__text">3</span>
+              </div>
+              <div class="content__shef d-flex align-items-center">
+                <i onclick="pausedGame()" class='bx bx-pause' ></i>
+              </div>
+          </div>
+        </div>
+            <div class="game">
+                <ul class="game__list d-flex flex-wrap">
+                 
+                </ul>
+            </div>
+      </section>
+
+    
+      
+      <div class="paused">
+          <div class="paused__main">
+              <div class="d-flex align-items-center">
+                <i onclick="playGame()" class='bx bx-play volumeIcon me-2' ></i>
+                <span class='volumeIcon'>?</span>
+              </div>
+              <div class="d-flex align-items-center">
+                <i class='bx bx-home-alt volumeIcon me-2'></i>
+                <i onclick="changeIcon()" class='bx bx-volume-full volumeIcon'></i>
+                <i onclick="changeIcon2()" class='bx bx-volume-mute volumeIcon'></i>
+              </div>
+          </div>
+    </div>
+
+
+
     <script src="js/main.js"></script>
+    <script src="js//time.js"></script>
   </body>
 </html>
